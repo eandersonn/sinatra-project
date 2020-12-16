@@ -1,0 +1,8 @@
+<h1>School of Arts</h1>
+<h2>Hi <%= current_user.username %>!</h2> 
+    <h3> Add a course for the Semester! </h3>
+<form method="POST" action="/courses">
+    Course Name: <input type= "text" name= "title"><br><br>
+    Course Description: <input type= "text" name= "description">
+    <input type="submit" value="add course">
+</form>

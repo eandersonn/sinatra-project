@@ -1,0 +1,15 @@
+<h1>School of Arts</h1>
+<h2>Hi <%= current_user.username %>!</h2> 
+<h3> Course: <%= @course.title %> </h3>
+
+<h3> Course description: </h3>
+<p><%= @course.description %></p>
+<h3><a href= "/courses/<%= @course.id %>/edit"> Edit Course </a></h3>
+<br>
+<form method="POST" action="/courses/<%= @course.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value= "Delete Course">
+</form>
+<div class="sidebar">
+      <h3>Do you want to <a href= "/logout"> Logout </a>?</h3>
+</div>

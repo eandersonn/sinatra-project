@@ -1,0 +1,12 @@
+<% if logged_in? %>
+<h1>School of Arts</h1>
+    <h2>Hi <%= current_user.username %>!</h2> 
+    <h3> Here are all the courses for the Semester! </h3>
+<% end %>
+<h3> <a href= "/courses/new"> Click here </a> to add a course </h3>
+<% @courses.each do |a|%>
+   <a href= "/courses/<%= a.id %>"> <%= a.title %> </a><br>
+<% end %>
+<div class="sidebar">
+      <h3>Do you want to <a href= "/logout"> Logout </a>?</h3>
+</div>
